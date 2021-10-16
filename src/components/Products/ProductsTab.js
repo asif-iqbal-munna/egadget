@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab, Container, Row, Col, Card } from "react-bootstrap";
+import { Tabs, Tab, Container, Row, Col, Card, Button } from "react-bootstrap";
 import useProducts from "../../hooks/useProducts";
 
 const ProductsTab = () => {
@@ -18,7 +18,7 @@ const ProductsTab = () => {
         >
           {/* Tab items for the laptop */}
           <Tab eventKey="home" title="Home">
-            <Row xs={1} md={3} className="g-4">
+            <Row xs={1} sm={2} md={3} lg={4} className="g-4">
               {laptops.map((laptop) => (
                 <Col key={laptop.id}>
                   <Card>
@@ -31,6 +31,9 @@ const ProductsTab = () => {
                         </small>
                         <small className="fs-5 fw-bold">{laptop.sale}</small>
                       </Card.Text>
+                      <Button variant="info" className="d-block mx-auto">
+                        Add To Cart
+                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -39,19 +42,24 @@ const ProductsTab = () => {
           </Tab>
           {/* Tab items for the cameras */}
           <Tab eventKey="profile" title="Profile">
-            <Row xs={1} md={3} className="g-4">
+            <Row xs={1} sm={2} md={3} lg={4} className="g-4">
               {cameras.map((camera) => (
                 <Col key={camera.id}>
                   <Card>
                     <Card.Img variant="top" src={camera.displayImg} />
                     <Card.Body>
-                      <Card.Title>{camera.name}</Card.Title>
+                      <Card.Title className="fs-6 fs-2">
+                        {camera.name}
+                      </Card.Title>
                       <Card.Text>
                         <small className="me-4 fs-6 text-decoration-line-through">
                           {camera.price}
                         </small>
                         <small className="fs-5 fw-bold">{camera.sale}</small>
                       </Card.Text>
+                      <Button variant="info" className="d-block mx-auto">
+                        Add To Cart
+                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -60,7 +68,7 @@ const ProductsTab = () => {
           </Tab>
           {/* Tab Items for the watches */}
           <Tab eventKey="contact" title="Contact">
-            <Row xs={1} md={3} className="g-4">
+            <Row xs={1} sm={2} md={3} lg={4} className="g-4">
               {watches.map((watch) => (
                 <Col key={watch.id}>
                   <Card>
@@ -73,6 +81,9 @@ const ProductsTab = () => {
                         </small>
                         <small className="fs-5 fw-bold">{watch.sale}</small>
                       </Card.Text>
+                      <Button variant="info" className="d-block mx-auto">
+                        Add To Cart
+                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>

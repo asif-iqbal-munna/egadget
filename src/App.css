@@ -15,8 +15,47 @@
   background-color: #8e44ad !important;
 }
 
+.nav-tabs {
+  justify-content: center;
+  border: none;
+}
+
+.nav-tabs .nav-item:not(:last-child) {
+  margin-right: 25px !important;
+}
+
+.nav-tabs .nav-item .nav-link {
+  color: #2c3e50;
+  border: 3px solid #2c3e50;
+  border-radius: 100px;
+}
+
+.nav-tabs .nav-item .nav-link:active,
+.nav-tabs .nav-link.active {
+  background-color: #34495eea !important;
+  color: #fff;
+  border: none;
+  transform: scale(1.2);
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+
 @media only screen and (min-width: 768px) {
   .w-md-50 {
     width: 50% !important;
+  }
+  .fs-2 {
+    font-size: 20px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav-tabs .nav-item:not(:last-child) {
+    margin-right: 15px !important;
+  }
+  .nav-tabs .nav-item .nav-link {
+    padding: 8px 8px;
+    font-size: 12px;
   }
 }
