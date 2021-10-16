@@ -11,3 +11,6 @@
 .cursor {
   cursor: pointer;
 }
+.carousel-indicators button {
+  background-color: #8e44ad !important;
+}

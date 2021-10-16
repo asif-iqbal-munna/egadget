@@ -6,6 +6,8 @@ import {
   Nav,
   Navbar,
 } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const MainHeader = () => {
   return (
@@ -24,8 +26,11 @@ const MainHeader = () => {
             />
           </InputGroup>
           <Nav className="ms-auto">
-            <i className="fas fa-shopping-cart fs-4 text-white me-5 cursor"></i>
-            <i className="fas fa-user fs-4 text-white cursor"></i>
+            <FontAwesomeIcon
+              className="fs-4 text-white me-5 cursor"
+              icon={faShoppingCart}
+            />
+            <FontAwesomeIcon className="fs-4 text-white cursor" icon={faUser} />
           </Nav>
         </Navbar.Collapse>
       </Container>
