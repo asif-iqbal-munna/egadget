@@ -7,3 +7,7 @@
 .bg-purple {
   background-color: #8e44ad;
 }
+
+.cursor {
+  cursor: pointer;
+}
