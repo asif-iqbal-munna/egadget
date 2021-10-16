@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const MainHeader = () => {
   return (
-    <Navbar bg="dark" expand="lg">
+    <Navbar bg="dark" expand="lg" className="overflow-hidden">
       <Container className="d-flex align-items-center">
         <Navbar.Brand as={Link} to="/home" className="text-white fs-3">
           E-gadget
@@ -31,7 +31,10 @@ const MainHeader = () => {
               className="fs-4 text-white me-5 cursor mb-3 mb-md-0"
               icon={faShoppingCart}
             />
-            <FontAwesomeIcon className="fs-4 text-white cursor mb-2 mb-md-0" icon={faUser} />
+            <FontAwesomeIcon
+              className="fs-4 text-white cursor mb-2 mb-md-0"
+              icon={faUser}
+            />
           </Nav>
         </Navbar.Collapse>
       </Container>

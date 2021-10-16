@@ -39,7 +39,14 @@
 }
 
 .card:hover {
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.stock {
+  display: inline !important;
+  background-color: #35bedaf3;
+  color: #fff;
+  padding: 8px 12px;
 }
 
 @media only screen and (min-width: 768px) {
