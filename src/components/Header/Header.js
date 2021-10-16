@@ -6,7 +6,7 @@ import SubHeader from "./SubHeader";
 const Header = () => {
   return (
     <header>
-      <div className="bg-light border-bottom">
+      <div className="d-none d-md-block bg-light border-bottom">
         <Container>
           <Row>
             <SubHeader />
