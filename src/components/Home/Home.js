@@ -1,17 +1,14 @@
 import React from "react";
-import useProducts from "../../hooks/useProducts";
 import Header from "../Header/Header";
 import HeroSlider from "../HeroSlider/HeroSlider";
-import Products from "../Products/products";
+import ProductsTab from "../Products/ProductsTab";
 
 const Home = () => {
-  const [products] = useProducts();
-  console.log(products);
   return (
     <div>
       <Header />
       <HeroSlider />
-      <Products />
+      <ProductsTab />
     </div>
   );
 };
