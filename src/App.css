@@ -49,6 +49,23 @@
   padding: 8px 12px;
 }
 
+.cart {
+  position: relative;
+}
+
+.order {
+  position: absolute;
+  right: -8px;
+  top: -19px;
+}
+
+.offcanvas {
+  width: 30% !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
 @media only screen and (min-width: 768px) {
   .w-md-50 {
     width: 50% !important;
@@ -64,5 +81,13 @@
   .nav-tabs .nav-item .nav-link {
     padding: 8px 8px;
     font-size: 12px;
+  }
+  .offcanvas {
+    width: 50% !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .offcanvas {
+    width: 100% !important;
   }
 }

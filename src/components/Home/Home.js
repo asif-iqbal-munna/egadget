@@ -3,12 +3,13 @@ import Header from "../Header/Header";
 import HeroSlider from "../HeroSlider/HeroSlider";
 import ProductsTab from "../Products/ProductsTab";
 
-const Home = () => {
+const Home = ({ addToCart }) => {
+  console.log();
   return (
     <div>
       <Header />
       <HeroSlider />
-      <ProductsTab />
+      <ProductsTab addToCart={addToCart} />
     </div>
   );
 };

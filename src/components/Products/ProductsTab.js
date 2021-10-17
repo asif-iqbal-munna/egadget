@@ -1,18 +1,12 @@
-import { Tabs, Tab, Container, Row, Col, Card, Button } from "react-bootstrap";
-import UseOrders from "../../hooks/UseOrders";
+import { Tabs, Container, Row, Tab, Col, Card, Button } from "react-bootstrap";
 import useProducts from "../../hooks/useProducts";
 
-const ProductsTab = () => {
+const ProductsTab = ({ addToCart }) => {
   const [products] = useProducts();
 
   const laptops = products.filter((product) => product.catagory === "laptop"); // Getting all laptops by catagroy
   const cameras = products.filter((product) => product.catagory === "camera"); // Getting all cameras by catagroy
   const watches = products.filter((product) => product.catagory === "watch"); // Getting all watches by catagroy
-
-  const handleAddToCart = (id) => {
-    UseOrders(id);
-  };
-
   return (
     <Container className="my-5">
       <Row>
@@ -40,7 +34,7 @@ const ProductsTab = () => {
                         <small className="fs-5 fw-bold">{laptop.sale}</small>
                       </Card.Text>
                       <Button
-                        onClick={() => handleAddToCart(laptop.id)}
+                        onClick={() => addToCart(laptop.id)}
                         variant="info"
                         className="d-block mx-auto"
                       >
@@ -73,7 +67,7 @@ const ProductsTab = () => {
                         <small className="fs-5 fw-bold">{camera.sale}</small>
                       </Card.Text>
                       <Button
-                        onClick={() => handleAddToCart(camera.id)}
+                        onClick={() => addToCart(camera.id)}
                         variant="info"
                         className="d-block mx-auto"
                       >
@@ -104,7 +98,7 @@ const ProductsTab = () => {
                         <small className="fs-5 fw-bold">{watch.sale}</small>
                       </Card.Text>
                       <Button
-                        onClick={() => handleAddToCart(watch.id)}
+                        onClick={() => addToCart(watch.id)}
                         variant="info"
                         className="d-block mx-auto"
                       >
